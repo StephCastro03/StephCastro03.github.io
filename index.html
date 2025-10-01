@@ -1,15 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <link rel="icon" href="IMG_4330.JPG" type="image/jpeg">
     <title>Stephanie Castro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* Global Styles */
+        body {
+            margin: 20px;
+            padding: 20px;
+            height: 100vh;
+            background-color: rgb(37, 42, 65);
+            font-family: 'Times New Roman', sans-serif;
+            color: white;
+        }
+
+        /* Center Intro Section */
+        .intro-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1, h2, h3, h4 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            padding: 5px 0;
+        }
+
+        p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        ol, ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+            padding-left: 10px;
+        }
+
+        div a {
+            display: block;
+            margin-bottom: 8px;
+            padding: 4px 0;
+        }
+
+        img {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 5px;
+        }
+
+        /* Dog Image in Corner */
+        .dog-container {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            text-align: center;
+        }
+
+        .dog-container img {
+            max-width: 150px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+
+        .dog-container h4 {
+            margin: 5px 0;
+            font-size: 16px;
+            color: white;
+        }
+    </style>
+
 </head>
 <body>
-    <h1>Welcome to My Personal Website</h1>
-    <p>Hello, I am Stephanie Castro! I'm a senior at Ralston Valley High School and also attending Warren Tech in the Computer Science program. I'm really passionate about where tech is heading, especially in the world of digital forensics, and that’s the career path I’m aiming for.</p>
-    <p>I also have past experience in forensics at Warren Tech! My interest in digital forensics is what got me into computer science in the first place.</p>
-    <p>I am currently learning Python and I am helping build an AI-powered diagnostic tool for the NASA HUNCH Program. I am always looking for new ways to grow as a problem solver and as a developer.</p> 
-    <h2> Top 5 Favorite Movies:</h2>
+
+    <!-- Centered Intro Section -->
+    <div class="intro-section">
+        <h1>Welcome to My Personal Website</h1>
+        <p>Hello, I am Stephanie Castro! I'm a senior at Ralston Valley High School and also attending Warren Tech in the Computer Science program. I'm really passionate about where tech is heading, especially in the world of digital forensics, and that’s the career path I’m aiming for.</p>
+        <p>I also have past experience in forensics at Warren Tech! My interest in digital forensics is what got me into computer science in the first place.</p>
+        <p>I am currently learning Python and I am helping build an AI-powered diagnostic tool for the NASA HUNCH Program. I am always looking for new ways to grow as a problem solver and as a developer.</p>
+    </div>
+
+    <h2>Top 5 Favorite Movies:</h2>
     <ol> 
       <li>10 Things I Hate About You</li>
       <li>50 First Dates</li>
@@ -17,6 +94,7 @@
       <li>The Notebook</li>
       <li>Happy Gilmore</li>
     </ol>
+
     <h2>Favorite Animals</h2>
     <ul>
       <li>Penguins</li>
@@ -25,72 +103,26 @@
       <li>Ducks</li>
       <li>Pandas</li>
     </ul>
+
     <h3>Links</h3>
     <div>
-        <a target="_blank" href="https://www.linkedin.com/in/stephanie-castro-038131387/">LinkedIn</a><br>
-        <a target="_blank" href="https://github.com/StephCastro03">Github</a><br>
-        <a target="_blank" href="https://ralstonvalley.jeffcopublicschools.org/">Ralston Valley</a><br>
-        <a target="_blank" href="https://www.amazon.com/?tag=admarketus-20&ref=pd_sl_3557b8bdcef47df5543aca43cba3baf3172e77e6695a84d14d0d2cda&mfadid=adm">Amazon</a><br>
-        <a target="_blank" href="https://nasahunch.com/">NASA HUNCH</a><br>
-        <a target="_blank" href="Second_Page.html">Resume</a><br>
+        <a target="_blank" href="https://www.linkedin.com/in/stephanie-castro-038131387/">LinkedIn</a>
+        <a target="_blank" href="https://github.com/StephCastro03">Github</a>
+        <a target="_blank" href="https://ralstonvalley.jeffcopublicschools.org/">Ralston Valley</a>
+        <a target="_blank" href="https://www.amazon.com/?tag=admarketus-20&ref=pd_sl_3557b8bdcef47df5543aca43cba3baf3172e77e6695a84d14d0d2cda&mfadid=adm">Amazon</a>
+        <a target="_blank" href="https://nasahunch.com/">NASA HUNCH</a>
+        <a target="_blank" href="Second_Page.html">Resume</a>
     </div>
 
     <div style="text-align: center;">
         <img src="IMG_4109.JPG" width="250" height="360">
     </div>
- <html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dog Image Example</title>
-  <style>
-    .dog-container {
-      position: fixed;
-      bottom: 10px;
-      right: 10px;
-      text-align: center;
-    }
 
-    .dog-container img {
-      max-width: 150px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      border-radius: 10px;
-    }
-
-    .dog-container h4 {
-      margin: 5px 0;
-      font-size: 16px;
-      color: white;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="dog-container">
-    <h4>My Dogo</h4>
-    <img src="5286.jpg" alt="This is my dog Snuggles in his favorite Christmas costume.">
-  </div>
+    <!-- Dog Image in Corner -->
+    <div class="dog-container">
+        <h4>My Dogo</h4>
+        <img src="5286.jpg" alt="This is my dog Snuggles in his favorite Christmas costume.">
+    </div>
 
 </body>
 </html>
-
-
-</body>
-</html>
-<style>
-  body {
-    margin: 0;
-    height: 100vh;
-    background-color: rgb(37, 42, 65);
-  }
-
-
-</style>
-<style>* {
-    font-family: 'Times New Roman', sans-serif ;
-    color: white ;
-}
-     </style>
