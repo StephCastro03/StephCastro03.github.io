@@ -1,65 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="IMG_4330.JPG" type="image/jpeg">
-    <title>Stephanie Castro</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephanie Castro</title>
+    <link rel="icon" href="IMG_4330.JPG" type="image/jpeg">
 
     <style>
-        /* Global Styles */
         body {
-            margin: 20px;
+            margin: 0;
             padding: 20px;
-            height: 100vh;
-            background-color: rgb(37, 42, 65);
             font-family: 'Times New Roman', sans-serif;
-            color: white;
+            background-color: rgb(143, 172, 226);
+            color: rgb(0, 0, 0);
+            transition: .3s;
         }
-
-        /* Center Intro Section */
+        body.normal {
+            background: #262a4f !important;
+            color: #ffffff !important;
+        }
+        body.dark {
+            background: #111 !important;
+            color: #fff !important;
+        }
+        .switch-container {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            width: 120px;
+            height: 36px;
+            background: #ccc;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5px;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+        .switch-dot {
+            width: 32px;
+            height: 32px;
+            background: #fff;
+            border-radius: 50%;
+            position: absolute;
+            left: 44px;
+            transition: .3s;
+            border: 1px solid #aaa;
+        }
+        .switch-option {
+            flex: 1;
+            height: 100%;
+            cursor: pointer;
+            z-index: 1;
+        }
+        .switch-label {
+            font-size: 12px;
+            text-align: center;
+            line-height: 36px;
+            width: 32px;
+            color: #333;
+            user-select: none;
+        }
         .intro-section {
             text-align: center;
             margin-bottom: 30px;
         }
-
         h1, h2, h3, h4 {
             margin-top: 20px;
             margin-bottom: 10px;
             padding: 5px 0;
         }
-
         p {
             margin-bottom: 15px;
             line-height: 1.6;
         }
-
         ol, ul {
             margin-left: 30px;
             margin-bottom: 20px;
             padding-left: 10px;
         }
-
         div a {
             display: block;
             margin-bottom: 8px;
             padding: 4px 0;
         }
-
         img {
             margin-top: 15px;
             margin-bottom: 15px;
             padding: 5px;
         }
-
-        /* Dog Image in Corner */
         .dog-container {
             position: fixed;
             bottom: 10px;
             right: 10px;
             text-align: center;
         }
-
         .dog-container img {
             max-width: 150px;
             height: auto;
@@ -67,18 +103,21 @@
             margin: 0 auto;
             border-radius: 10px;
         }
-
         .dog-container h4 {
             margin: 5px 0;
             font-size: 16px;
             color: white;
         }
     </style>
-
 </head>
 <body>
+    <div class="switch-container">
+        <div class="switch-dot" id="dot"></div>
+        <div class="switch-option" id="light"><span class="switch-label">Light</span></div>
+        <div class="switch-option" id="normal"><span class="switch-label">Normal</span></div>
+        <div class="switch-option" id="dark"><span class="switch-label">Dark</span></div>
+    </div>
 
-    <!-- Centered Intro Section -->
     <div class="intro-section">
         <h1>Welcome to My Personal Website</h1>
         <p>Hello, I am Stephanie Castro! I'm a senior at Ralston Valley High School and also attending Warren Tech in the Computer Science program. I'm really passionate about where tech is heading, especially in the world of digital forensics, and that’s the career path I’m aiming for.</p>
@@ -88,20 +127,20 @@
 
     <h2>Top 5 Favorite Movies:</h2>
     <ol> 
-      <li>10 Things I Hate About You</li>
-      <li>50 First Dates</li>
-      <li>Karate Kid</li>
-      <li>The Notebook</li>
-      <li>Happy Gilmore</li>
+        <li>10 Things I Hate About You</li>
+        <li>50 First Dates</li>
+        <li>Karate Kid</li>
+        <li>The Notebook</li>
+        <li>Happy Gilmore</li>
     </ol>
 
     <h2>Favorite Animals</h2>
     <ul>
-      <li>Penguins</li>
-      <li>Dogs</li>
-      <li>Cats</li>
-      <li>Ducks</li>
-      <li>Pandas</li>
+        <li>Penguins</li>
+        <li>Dogs</li>
+        <li>Cats</li>
+        <li>Ducks</li>
+        <li>Pandas</li>
     </ul>
 
     <h3>Links</h3>
@@ -118,11 +157,32 @@
         <img src="IMG_4109.JPG" width="250" height="360">
     </div>
 
-    <!-- Dog Image in Corner -->
-    <div class="dog-container">
-        <h4>My Dogo</h4>
-        <img src="5286.jpg" alt="This is my dog Snuggles in his favorite Christmas costume.">
-    </div>
+<a href="another-page.html" style="text-decoration:none; display:inline-block; position:relative; width:150px; padding:8px 10px; background-color:#f9f9f9; border:2px solid #333; border-radius:8px; overflow:visible; transition:background 0.3s; text-align:center;">
+    <h4 style="margin:0 0 5px 0; font-size:14px; color:#000;">My Dogo</h4>
+    <img src="5286.jpg" alt="This is my dog Snuggles in his favorite Christmas costume." 
+         style="width:130px; height:130px; object-fit:cover; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.2);">
+</a>
 
+</a>
+
+    <script>
+        let dot = document.getElementById("dot");
+        let light = document.getElementById("light");
+        let normal = document.getElementById("normal");
+        let dark = document.getElementById("dark");
+
+        light.onclick = () => {
+            document.body.className = "";
+            dot.style.left = "4px";
+        }
+        normal.onclick = () => {
+            document.body.className = "normal";
+            dot.style.left = "44px";
+        }
+        dark.onclick = () => {
+            document.body.className = "dark";
+            dot.style.left = "84px";
+        }
+    </script>
 </body>
 </html>
